@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ftfy.cz — fix that for you</title>
+<meta name="description" content="A neighborhood DIY portal: bring your broken stuff to be fixed, borrow tools, or get something 3D printed.">
+<style>
+  :root {
+    --bg: #fbf8f3;
+    --ink: #20232a;
+    --accent: #e0562b;
+    --accent-2: #2b7a78;
+    --card: #ffffff;
+    --border: #e7e1d8;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+
+  a { color: var(--accent); }
+
+  header {
+    text-align: center;
+    padding: 5rem 1.5rem 3rem;
+  }
+
+  .logo {
+    font-size: clamp(3rem, 12vw, 6rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  .logo span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    font-size: 1.25rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    color: var(--ink);
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  nav a:hover {
+    background: var(--ink);
+    color: var(--bg);
+  }
+
+  main {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+  }
+
+  .intro {
+    max-width: 640px;
+    margin: 0 auto 4rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #444;
+  }
+
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    scroll-margin-top: 2rem;
+  }
+
+  .card .icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .card h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+  }
+
+  .card p {
+    margin: 0;
+    color: #555;
+  }
+
+  .card.fix-it { border-top: 4px solid var(--accent); }
+  .card.rent-it { border-top: 4px solid var(--accent-2); }
+  .card.print-it { border-top: 4px solid #6c5ce7; }
+
+  .contact {
+    text-align: center;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .contact h2 {
+    margin-top: 0;
+  }
+
+  .contact p {
+    color: #555;
+  }
+
+  .contact a.email {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 1.5rem 3rem;
+    color: #888;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="logo">ftfy<span>.cz</span></p>
+  <p class="tagline">fix that for you — a neighborhood DIY portal</p>
+  <nav>
+    <a href="#fix-it">Fix it</a>
+    <a href="#rent-it">Rent it</a>
+    <a href="#print-it">Print it</a>
+    <a href="#contact">Get in touch</a>
+  </nav>
+</header>
+
+<main>
+  <p class="intro">
+    No business plan, no profit motive — just a neighbor who likes tinkering.
+    If something's broken, missing a tool, or needs a custom part, this is the place to ask.
+    Contributions toward materials and tools are always appreciated, but never required.
+  </p>
+
+  <section class="services">
+    <article class="card fix-it" id="fix-it">
+      <span class="icon">🔧</span>
+      <h2>Fix it</h2>
+      <p>
+        Send me your broken stuff and I'll (try to) fix it. Got something that's just not
+        working the way you'd like? Send it over and I'll try to hack it or improve it too.
+      </p>
+    </article>
+
+    <article class="card rent-it" id="rent-it">
+      <span class="icon">🪚</span>
+      <h2>Rent it</h2>
+      <p>
+        Need a tool for a one-off job? Borrow it from me instead of buying one
+        you'll use once a year.
+      </p>
+    </article>
+
+    <article class="card print-it" id="print-it">
+      <span class="icon">🖨️</span>
+      <h2>Print it</h2>
+      <p>
+        Need a part, a bracket, or some random thingamajig? I'll 3D print it for you.
+      </p>
+    </article>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Get in touch</h2>
+    <p>Drop me a line and let's see what we can do together.</p>
+    <a class="email" href="mailto:hello@ftfy.cz">hello@ftfy.cz</a>
+  </section>
+</main>
+
+<footer>
+  ftfy.cz — fixing things for friends and neighbors, one project at a time.
+</footer>
+
+</body>
+</html>
